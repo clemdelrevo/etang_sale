@@ -1,0 +1,512 @@
+rstatix::add_significance("p.adj")
+bxp <- ggpubr::ggboxplot(sp, x = "method", y = "abondance",
+fill = "method", palette = c("#868686FF", "#EFC000FF"),
+xlab = "Méthode", ylab = "Abondance", facet.by = "habitat") +
+ggplot2::theme(legend.position = "none") +
+ggplot2::ggtitle(gsub("_", " ", tools::toTitleCase(x)))
+stat.test <- stat.test |> rstatix::add_xy_position(x = "method")
+bxp +
+ggpubr::stat_pvalue_manual(stat.test, label = "Wilcoxon-test, p = {p}",
+bracket.nudge.y = 1)
+})
+boxplot
+cowplot::plot_grid(boxplot[[1]], boxplot[[2]], rows = 2)
+cowplot::plot_grid(boxplot[[1]], boxplot[[2]], nrow = 2)
+boxplot <- lapply(unique(get_sp$espece), function(x) {
+sp <- get_sp[get_sp$espece == x, ]
+stat.test <- get_sp |>
+dplyr::group_by(habitat) |>
+rstatix::wilcox_test(abondance ~ method) |>
+rstatix::adjust_pvalue() |>
+rstatix::add_significance("p.adj")
+bxp <- ggpubr::ggboxplot(sp, x = "method", y = "abondance",
+fill = "method", palette = c("#868686FF", "#EFC000FF"),
+xlab = "Méthode", ylab = "Abondance", facet.by = "habitat") +
+ggplot2::theme(legend.position = "none") +
+ggplot2::ggtitle(gsub("_", " ", tools::toTitleCase(x)))
+stat.test <- stat.test |> rstatix::add_xy_position(x = "method")
+bxp +
+ggpubr::stat_pvalue_manual(stat.test, label = "Wilcoxon-test, p = {p}",
+bracket.nudge.y = 2)
+})
+cowplot::plot_grid(boxplot[[1]], boxplot[[2]], nrow = 2)
+boxplot <- lapply(unique(get_sp$espece), function(x) {
+sp <- get_sp[get_sp$espece == x, ]
+stat.test <- get_sp |>
+dplyr::group_by(habitat) |>
+rstatix::wilcox_test(abondance ~ method) |>
+rstatix::adjust_pvalue() |>
+rstatix::add_significance("p.adj")
+bxp <- ggpubr::ggboxplot(sp, x = "method", y = "abondance",
+fill = "method", palette = c("#868686FF", "#EFC000FF"),
+xlab = "Méthode", ylab = "Abondance", facet.by = "habitat") +
+ggplot2::theme(legend.position = "none") +
+ggplot2::ggtitle(gsub("_", " ", tools::toTitleCase(x)))
+stat.test <- stat.test |> rstatix::add_xy_position(x = "method")
+bxp +
+ggpubr::stat_pvalue_manual(stat.test, label = "Wilcoxon-test, p = {p}",
+bracket.nudge.y = 2, vjust = 2)
+})
+cowplot::plot_grid(boxplot[[1]], boxplot[[2]], nrow = 2)
+boxplot <- lapply(unique(get_sp$espece), function(x) {
+sp <- get_sp[get_sp$espece == x, ]
+stat.test <- get_sp |>
+dplyr::group_by(habitat) |>
+rstatix::wilcox_test(abondance ~ method) |>
+rstatix::adjust_pvalue() |>
+rstatix::add_significance("p.adj")
+bxp <- ggpubr::ggboxplot(sp, x = "method", y = "abondance",
+fill = "method", palette = c("#868686FF", "#EFC000FF"),
+xlab = "Méthode", ylab = "Abondance", facet.by = "habitat") +
+ggplot2::theme(legend.position = "none") +
+ggplot2::ggtitle(gsub("_", " ", tools::toTitleCase(x)))
+stat.test <- stat.test |> rstatix::add_xy_position(x = "method")
+bxp +
+ggpubr::stat_pvalue_manual(stat.test, label = "Wilcoxon-test, p = {p}",
+bracket.nudge.y = -2, vjust = 2)
+})
+cowplot::plot_grid(boxplot[[1]], boxplot[[2]], nrow = 2)
+boxplot <- lapply(unique(get_sp$espece), function(x) {
+sp <- get_sp[get_sp$espece == x, ]
+stat.test <- get_sp |>
+dplyr::group_by(habitat) |>
+rstatix::wilcox_test(abondance ~ method) |>
+rstatix::adjust_pvalue() |>
+rstatix::add_significance("p.adj")
+bxp <- ggpubr::ggboxplot(sp, x = "method", y = "abondance",
+fill = "method", palette = c("#868686FF", "#EFC000FF"),
+xlab = "Méthode", ylab = "Abondance", facet.by = "habitat") +
+ggplot2::theme(legend.position = "none") +
+ggplot2::ggtitle(gsub("_", " ", tools::toTitleCase(x)))
+stat.test <- stat.test |> rstatix::add_xy_position(x = "method")
+bxp +
+ggpubr::stat_pvalue_manual(stat.test, label = "Wilcoxon-test, p = {p}",
+bracket.nudge.y = -2)
+})
+cowplot::plot_grid(boxplot[[1]], boxplot[[2]], nrow = 2)
+boxplot <- lapply(unique(get_sp$espece), function(x) {
+sp <- get_sp[get_sp$espece == x, ]
+stat.test <- sp |>
+dplyr::group_by(habitat) |>
+rstatix::wilcox_test(abondance ~ method) |>
+rstatix::adjust_pvalue() |>
+rstatix::add_significance("p.adj")
+bxp <- ggpubr::ggboxplot(sp, x = "method", y = "abondance",
+fill = "method", palette = c("#868686FF", "#EFC000FF"),
+xlab = "Méthode", ylab = "Abondance", facet.by = "habitat") +
+ggplot2::theme(legend.position = "none") +
+ggplot2::ggtitle(gsub("_", " ", tools::toTitleCase(x)))
+stat.test <- stat.test |> rstatix::add_xy_position(x = "method")
+bxp +
+ggpubr::stat_pvalue_manual(stat.test, label = "Wilcoxon-test, p = {p}",
+bracket.nudge.y = -2)
+})
+cowplot::plot_grid(boxplot[[1]], boxplot[[2]], nrow = 2)
+boxplot <- lapply(unique(get_sp$espece), function(x) {
+sp <- get_sp[get_sp$espece == x, ]
+stat.test <- sp |>
+dplyr::group_by(habitat) |>
+rstatix::wilcox_test(abondance ~ method) |>
+rstatix::adjust_pvalue() |>
+rstatix::add_significance("p.adj")
+bxp <- ggpubr::ggboxplot(sp, x = "method", y = "abondance",
+fill = "method", palette = c("#868686FF", "#EFC000FF"),
+xlab = "Méthode", ylab = "Abondance", facet.by = "habitat") +
+ggplot2::theme(legend.position = "none") +
+ggplot2::ggtitle(gsub("_", " ", tools::toTitleCase(x)))
+stat.test <- stat.test |> rstatix::add_xy_position(x = "method")
+bxp +
+ggpubr::stat_pvalue_manual(stat.test, label = "Wilcoxon-test, p = {p}",
+bracket.nudge.y = -1)
+})
+cowplot::plot_grid(boxplot[[1]], boxplot[[2]], nrow = 2)
+?ggplot2::theme
+bxp <- ggpubr::ggboxplot(sp, x = "method", y = "abondance",
+fill = "method", palette = c("#868686FF", "#EFC000FF"),
+xlab = "Méthode", ylab = "Abondance", facet.by = "habitat") +
+ggplot2::theme(legend.position = "none",
+strip.background = ggplot2:::element_rect(color = "red")) +
+ggplot2::ggtitle(gsub("_", " ", tools::toTitleCase(x)))
+stat.test <- stat.test |> rstatix::add_xy_position(x = "method")
+bxp +
+ggpubr::stat_pvalue_manual(stat.test, label = "Wilcoxon-test, p = {p}",
+bracket.nudge.y = -1)
+bxp <- ggpubr::ggboxplot(sp, x = "method", y = "abondance",
+fill = "method", palette = c("#868686FF", "#EFC000FF"),
+xlab = "Méthode", ylab = "Abondance", facet.by = "habitat") +
+ggplot2::theme(legend.position = "none",
+strip.background = ggplot2:::element_rect(fill = "grey")) +
+ggplot2::ggtitle(gsub("_", " ", tools::toTitleCase(x)))
+stat.test <- stat.test |> rstatix::add_xy_position(x = "method")
+bxp +
+ggpubr::stat_pvalue_manual(stat.test, label = "Wilcoxon-test, p = {p}",
+bracket.nudge.y = -1)
+targets::tar_visnetwork(targets_only = T)
+targets::tar_destroy()
+targets::tar_visnetwork(targets_only = T)
+targets::tar_make()
+targets::tar_load(final_long)
+final_long
+sp <- do.call(rbind, lapply(unique(get_sp$espece), function(specie) {
+sp <- get_sp[get_sp$espece == specie, ]
+stat <- do.call(rbind, lapply(unique(sp$method), function(method) {
+#method = "belt"
+df <- sp[sp$method == method, ]
+stat_within <- do.call(rbind, lapply(unique(df$habitat), function(hab) {
+#hab = "bleu"
+sub_df <- df[df$habitat == hab, ]
+mean_value <- mean(sub_df$abondance)
+var_value <- var(sub_df$abondance)
+stat <- data.frame(habitat = hab, mean = mean_value, variance = var_value)
+return(stat)
+}))
+stat_within$method <- method
+return(stat_within)
+}))
+stat$specie <- specie
+return(stat)
+}))
+sp
+specie = "echinometra_mathaei"
+#specie = "echinometra_mathaei"
+sp <- get_sp[get_sp$espece == specie, ]
+sp
+final_long
+targets::tar_load(belt_long)
+belt_long
+targets::tar_load(fix_long)
+fix_long
+targets::tar_load(belt_wide)
+#targets::tar_load(belt_wide)
+belt_long <- tidyr::pivot_longer(belt_wide, cols = c("diadema_savignyi",
+"echinothrix_diadema",
+"echinometra_mathaei",
+"stomopneustes_variolaris",
+"echinothrix_calamaris",
+"tripneustes_gratilla",
+"toxopneustes_pileolus",
+"heterocentrotus_mamillatus",
+"holothuria_leucospilota",
+"holothuria_atra",
+"stichopus_chloronotus",
+"actinopyga_mauritiana",
+"actinopyga_echinites",
+"holothuria_cinerascens",
+"holothuria_nobilis",
+"holothuria_verrucosa",
+"synapta_maculata",
+"holothuria_pervicax",
+"holothuria_flavomaculata",
+"bohadschia_vitiensis",
+"actinopyga_apillata"
+))
+colnames(belt_long) <- c("habitat", "station", "transect", "method", "espece", "abondance")
+belt_long <- belt_long |>
+dplyr::group_by(habitat, station, method, espece) |>
+dplyr::summarise(abondance = mean(abondance))
+#n <- 1680
+#mean_value <- 10
+#sd_value <- 3
+#belt_long$abondance <- rnorm(n, mean = mean_value, sd = sd_value)
+#belt_wide <- tidyr::pivot_wider(belt_long, names_from = espece, values_from = abondance, values_fn = mean)
+belt_long <- data.frame(belt_long)
+belt_long
+targets::tar_load(fix_wide)
+fix_wide
+targets::tar_visnetwork(targets_only = T)
+targets::tar_destroy()
+targets::tar_visnetwork(targets_only = T)
+targets::tar_make()
+targets::tar_read(boxplot_sp)
+targets::tar_read(power_regression)
+targets::tar_make()
+targets::tar_make()
+targets::tar_read(boxplot_habitat)
+final_long <- final_long[final_long$espece %in% c("echinometra_mathaei", "stichopus_chloronotus"), ]
+x = "echinometra_mathaei"
+#x = "echinometra_mathaei"
+data <- final_long[final_long$espece == x, ]
+delta_curve <- do.call(rbind, lapply(3:10, function(n) {
+#n = 3
+data_belt <- data[data$method == "belt", ]
+data_fix <- data[data$method == "fix", ]
+select_site_belt <- sample(unique(data_belt$balise), n, replace = FALSE)
+select_belt <- data_belt[data_belt$balise %in% select_site_belt, ]
+m_belt <- mean(select_belt$abondance)
+sd_belt<- sd(select_belt$abondance)
+#belt_effectif <- sum(select_belt$abondance)
+select_site_fix <- sample(unique(data_fix$balise), n, replace = FALSE)
+select_fix <- data_fix[data_fix$balise %in% select_site_fix, ]
+m_fix <- mean(select_fix$abondance)
+sd_fix<- sd(select_fix$abondance)
+#fix_effectif <- sum(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fix", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff = abs(diff(df_value$mean)), family = x)
+return(diff)
+}))
+n = 3
+#n = 3
+data_belt <- data[data$method == "belt", ]
+data_fix <- data[data$method == "fix", ]
+select_site_belt <- sample(unique(data_belt$balise), n, replace = FALSE)
+select_site_belt <- sample(unique(data_belt$station), n, replace = FALSE)
+select_belt <- data_belt[data_belt$station %in% select_site_belt, ]
+m_belt <- mean(select_belt$abondance)
+sd_belt<- sd(select_belt$abondance)
+delta_curve <- do.call(rbind, lapply(3:10, function(n) {
+#n = 3
+data_belt <- data[data$method == "belt", ]
+data_fix <- data[data$method == "fix", ]
+select_site_belt <- sample(unique(data_belt$station), n, replace = FALSE)
+select_belt <- data_belt[data_belt$station %in% select_site_belt, ]
+m_belt <- mean(select_belt$abondance)
+sd_belt<- sd(select_belt$abondance)
+#belt_effectif <- sum(select_belt$abondance)
+select_site_fix <- sample(unique(data_fix$station), n, replace = FALSE)
+select_fix <- data_fix[data_fix$station %in% select_site_fix, ]
+m_fix <- mean(select_fix$abondance)
+sd_fix<- sd(select_fix$abondance)
+#fix_effectif <- sum(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fix", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff = abs(diff(df_value$mean)), family = x)
+return(diff)
+}))
+delta_curve
+final_long <- final_long[final_long$espece %in% c("echinometra_mathaei", "stichopus_chloronotus") & !final_long$habitat == "dar_a_epandage_detritique",]
+x = "echinometra_mathaei"
+#x = "echinometra_mathaei"
+data <- final_long[final_long$espece == x, ]
+delta_curve <- do.call(rbind, lapply(3:5, function(n) {
+#n = 3
+data_belt <- data[data$method == "belt", ]
+data_fix <- data[data$method == "fix", ]
+select_site_belt <- sample(unique(data_belt$station), n, replace = FALSE)
+select_belt <- data_belt[data_belt$station %in% select_site_belt, ]
+m_belt <- mean(select_belt$abondance)
+sd_belt<- sd(select_belt$abondance)
+#belt_effectif <- sum(select_belt$abondance)
+select_site_fix <- sample(unique(data_fix$station), n, replace = FALSE)
+select_fix <- data_fix[data_fix$station %in% select_site_fix, ]
+m_fix <- mean(select_fix$abondance)
+sd_fix<- sd(select_fix$abondance)
+#fix_effectif <- sum(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fix", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff = abs(diff(df_value$mean)), family = x)
+return(diff)
+}))
+x = "echinometra_mathaei"
+#x = "echinometra_mathaei"
+data <- final_long[final_long$espece == x, ]
+delta_curve <- do.call(rbind, lapply(3:5, function(n) {
+#n = 3
+data_belt <- data[data$method == "belt", ]
+data_fix <- data[data$method == "fix", ]
+select_site_belt <- sample(unique(data_belt$station), n, replace = FALSE)
+select_belt <- data_belt[data_belt$station %in% select_site_belt, ]
+m_belt <- mean(select_belt$abondance)
+sd_belt<- sd(select_belt$abondance)
+#belt_effectif <- sum(select_belt$abondance)
+select_site_fix <- sample(unique(data_fix$station), n, replace = FALSE)
+select_fix <- data_fix[data_fix$station %in% select_site_fix, ]
+m_fix <- mean(select_fix$abondance)
+sd_fix<- sd(select_fix$abondance)
+#fix_effectif <- sum(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fix", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff = abs(diff(df_value$mean)), family = x)
+return(diff)
+}))
+n = 3
+#n = 3
+data_belt <- data[data$method == "belt", ]
+data_fix <- data[data$method == "fix", ]
+select_site_belt <- sample(unique(data_belt$station), n, replace = FALSE)
+select_belt <- data_belt[data_belt$station %in% select_site_belt, ]
+m_belt <- mean(select_belt$abondance)
+sd_belt<- sd(select_belt$abondance)
+select_site_fix <- sample(unique(data_fix$station), n, replace = FALSE)
+data_fix
+data
+delta_curve <- do.call(rbind, lapply(3:5, function(n) {
+#n = 3
+data_belt <- data[data$method == "belt", ]
+data_fix <- data[data$method == "fixe", ]
+select_site_belt <- sample(unique(data_belt$station), n, replace = FALSE)
+select_belt <- data_belt[data_belt$station %in% select_site_belt, ]
+m_belt <- mean(select_belt$abondance)
+sd_belt<- sd(select_belt$abondance)
+#belt_effectif <- sum(select_belt$abondance)
+select_site_fix <- sample(unique(data_fix$station), n, replace = FALSE)
+select_fix <- data_fix[data_fix$station %in% select_site_fix, ]
+m_fix <- mean(select_fix$abondance)
+sd_fix<- sd(select_fix$abondance)
+#fix_effectif <- sum(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fixe", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff = abs(diff(df_value$mean)), family = x)
+return(diff)
+}))
+delta_curve
+select_site_belt <- sample(unique(data_belt$station), n, replace = FALSE)
+lapply(1:1000, function(x) data_belt[sample(1:nrow(data_belt), n, replace = FALSE), ])
+select_belt <- do.call(rbind, lapply(1:1000, function(x) data_belt[sample(1:nrow(data_belt), n, replace = FALSE), ]))
+select_belt
+sd_belt<- var(select_belt$abondance)
+m_belt <- mean(select_belt$abondance)
+sd_belt<- var(select_belt$abondance)
+sd_belt
+n = 3
+#n = 3
+select_belt <- do.call(rbind, lapply(1:1000, function(x) data_belt[sample(1:nrow(data_belt), n, replace = FALSE), ]))
+m_belt <- mean(select_belt$abondance)
+sd_belt<- var(select_belt$abondance)
+select_fix <- do.call(rbind, lapply(1:1000, function(x) data_fix[sample(1:nrow(data_fix), n, replace = FALSE), ]))
+data_fix
+data_fix  <- data[data$method == "fixe", ]
+data_fix
+select_fix <- do.call(rbind, lapply(1:1000, function(x) data_fix[sample(1:nrow(data_fix), n, replace = FALSE), ]))
+m_fix <- mean(select_fix$abondance)
+sd_fix<- var(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fixe", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fixe", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff = abs(diff(df_value$mean)), family = x)
+diff
+diff <- data.frame( n = n, diff_mean = abs(diff(df_value$mean)), diff_var = abs(diff(df_value$sd)), family = x)
+diff
+delta_curve <- do.call(rbind, lapply(1:5, function(n) {
+#n = 3
+select_belt <- do.call(rbind, lapply(1:1000, function(x) data_belt[sample(1:nrow(data_belt), n, replace = FALSE), ]))
+m_belt <- mean(select_belt$abondance)
+sd_belt<- var(select_belt$abondance)
+#belt_effectif <- sum(select_belt$abondance)
+select_fix <- do.call(rbind, lapply(1:1000, function(x) data_fix[sample(1:nrow(data_fix), n, replace = FALSE), ]))
+m_fix <- mean(select_fix$abondance)
+sd_fix<- var(select_fix$abondance)
+#fix_effectif <- sum(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fixe", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff_mean = abs(diff(df_value$mean)), diff_var = abs(diff(df_value$sd)), family = x)
+return(diff)
+}))
+delta_mean <- do.call(rbind, lapply(unique(final_long$espece), function(x) {
+#x = "echinometra_mathaei"
+data <- final_long[final_long$espece == x, ]
+data_belt <- data[data$method == "belt", ]
+data_fix  <- data[data$method == "fixe", ]
+delta_curve <- do.call(rbind, lapply(1:5, function(n) {
+#n = 3
+select_belt <- do.call(rbind, lapply(1:1000, function(x) data_belt[sample(1:nrow(data_belt), n, replace = FALSE), ]))
+m_belt <- mean(select_belt$abondance)
+sd_belt<- var(select_belt$abondance)
+#belt_effectif <- sum(select_belt$abondance)
+select_fix <- do.call(rbind, lapply(1:1000, function(x) data_fix[sample(1:nrow(data_fix), n, replace = FALSE), ]))
+m_fix <- mean(select_fix$abondance)
+sd_fix<- var(select_fix$abondance)
+#fix_effectif <- sum(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fixe", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff_mean = abs(diff(df_value$mean)), diff_var = abs(diff(df_value$sd)), family = x)
+return(diff)
+}))
+}))
+ggplot2::ggplot(delta_mean, ggplot2::aes(x = n, y = diff, color = family)) +
+ggplot2::geom_line() +
+ggplot2::geom_smooth(method = "loess") +
+ggplot2::ylab("Delta") +
+ggplot2::xlab("Nombre de réplicat") +
+ggplot2::theme_linedraw() +
+ggplot2::labs(color = "Famille")
+delta_mean
+ggplot2::ggplot(delta_mean, ggplot2::aes(x = n, y = diff_mean, color = family)) +
+ggplot2::geom_line() +
+ggplot2::geom_smooth(method = "loess") +
+ggplot2::ylab("Delta") +
+ggplot2::xlab("Nombre de réplicat") +
+ggplot2::theme_linedraw() +
+ggplot2::labs(color = "Famille")
+data_belt
+delta_curve <- do.call(rbind, lapply(1:5, function(n) {
+#n = 3
+select_belt <- do.call(rbind, lapply(1:1000, function(x) data_belt[sample(1:nrow(data_belt), n, replace = FALSE), ]))
+m_belt <- mean(select_belt$abondance)
+sd_belt<- var(select_belt$abondance)
+#belt_effectif <- sum(select_belt$abondance)
+select_fix <- do.call(rbind, lapply(1:1000, function(x) data_fix[sample(1:nrow(data_fix), n, replace = FALSE), ]))
+m_fix <- mean(select_fix$abondance)
+sd_fix<- var(select_fix$abondance)
+#fix_effectif <- sum(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fixe", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff_mean = abs(diff(df_value$mean)), diff_var = abs(diff(df_value$sd)), family = x)
+return(diff)
+}))
+delta_curve
+delta_curve <- do.call(rbind, lapply(2:5, function(n) {
+#n = 3
+select_belt <- do.call(rbind, lapply(1:1000, function(x) data_belt[sample(1:nrow(data_belt), n, replace = FALSE), ]))
+m_belt <- mean(select_belt$abondance)
+sd_belt<- var(select_belt$abondance)
+#belt_effectif <- sum(select_belt$abondance)
+select_fix <- do.call(rbind, lapply(1:1000, function(x) data_fix[sample(1:nrow(data_fix), n, replace = FALSE), ]))
+m_fix <- mean(select_fix$abondance)
+sd_fix<- var(select_fix$abondance)
+#fix_effectif <- sum(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fixe", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff_mean = abs(diff(df_value$mean)), diff_var = abs(diff(df_value$sd)), family = x)
+return(diff)
+}))
+delta_curve
+do.call(rbind, lapply(unique(final_long$habitat), function(hab) {
+habitat <- final_long[final_long$habitat == hab, ]
+delta_mean <- do.call(rbind, lapply(unique(habitat$espece), function(x) {
+#x = "echinometra_mathaei"
+data <- habitat[habitat$espece == x, ]
+data_belt <- data[data$method == "belt", ]
+data_fix  <- data[data$method == "fixe", ]
+delta_curve <- do.call(rbind, lapply(2:5, function(n) {
+#n = 3
+select_belt <- do.call(rbind, lapply(1:1000, function(x) data_belt[sample(1:nrow(data_belt), n, replace = FALSE), ]))
+m_belt <- mean(select_belt$abondance)
+sd_belt<- var(select_belt$abondance)
+#belt_effectif <- sum(select_belt$abondance)
+select_fix <- do.call(rbind, lapply(1:1000, function(x) data_fix[sample(1:nrow(data_fix), n, replace = FALSE), ]))
+m_fix <- mean(select_fix$abondance)
+sd_fix<- var(select_fix$abondance)
+#fix_effectif <- sum(select_fix$abondance)
+df <- rbind(data.frame(method = "belt", mean = m_belt, sd = sd_belt), #effectif = belt_effectif),
+data.frame(method = "fixe", mean = m_fix, sd = sd_fix)) # effectif = fix_effectif))
+df_value <- df[, !names(df) %in% "method"]
+diff <- data.frame( n = n, diff_mean = abs(diff(df_value$mean)), diff_var = abs(diff(df_value$sd)), family = x)
+return(diff)
+}))
+}))
+}))
+final_long
+#x = "echinometra_mathaei"
+data <- habitat[habitat$espece == x, ]
+#x = "echinometra_mathaei"
+data <- final_long[final_long$espece == x, ]
+data
+hab = "platier_a_colonies_coralliennes"
+habitat <- final_long[final_long$habitat == hab, ]
+x = "echinometra_mathaei"
+#x = "echinometra_mathaei"
+data <- habitat[habitat$espece == x, ]
+data
